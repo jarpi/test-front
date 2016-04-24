@@ -124,17 +124,6 @@
           <div class="row">
             <div id="canvas_data" class="canvas_data col-xs-12">
               <div class="row">
-                <!-- <div class="server_box col-xs-3 hadoop" style="text-align:center;">
-                  <div class="row">
-                    <span class="col-xs-12"><h1>Hd</h1></span>  
-                  </div>
-                  <div class="row" style="margin-top:10px;">
-                    <span class="col-xs-12"><span>Hadoop</span></span>  
-                  </div>
-                  <div class="row">
-                    <span class="col-xs-12" style="color:black;"><span>Added 32 min ago</span></span>  
-                  </div>
-                </div> -->
                 <div class="server_box col-xs-3 {{srv.apps[0].name.toLowerCase()}}" style="text-align:center;" ng-repeat="srv in servers track by $index">
                   <div class="row">
                     <span class="col-xs-12"><h1>{{srv.apps[0].name}} - {{srv.apps[1].name}}</h1></span>  
@@ -146,30 +135,12 @@
                     <span class="col-xs-12" style="color:black;"><span>{{srv.apps[0].lastUpdated}} - {{srv.apps[1].lastUpdated}}</span></span>  
                   </div>
                 </div>
-                <!-- <div class="server_box col-xs-3" ng-repeat="srv in servers track by $index"></div> -->
-                <!-- <div server></div> --> 
-                <!-- <div class="server_box col-xs-3 rails"></div>
-                <div class="server_box col-xs-3 chronos"></div>
-                <div class="server_box col-xs-3 storm"></div>
-                <div class="server_box col-xs-3 spark"></div>
-                <div class="server_box col-xs-3 spark"></div>
-                <div class="server_box col-xs-3"></div>
-                <div class="server_box col-xs-3 hadoop"></div>
-                <div class="server_box col-xs-3 rails"></div>
-                <div class="server_box col-xs-3 chronos"></div>
-                <div class="server_box col-xs-3 storm"></div>
-                <div class="server_box col-xs-3 spark"></div>
-                <div class="server_box col-xs-3 spark"></div>
-                <div class="server_box col-xs-3"></div>
-                <div class="server_box col-xs-3"></div>
-                <div class="server_box col-xs-3"></div> -->
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

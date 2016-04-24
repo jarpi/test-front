@@ -49,16 +49,16 @@ Servers.prototype.RemoveServer = function() {
 Servers.prototype.AddApp = function(type) {
 	var that = this; 
 	return new Promise(function(resolve, reject){
+		
 		// Get app template 
 		var appTypeTpl = that.APP_TYPES.find(function(item){
 			return type === item.title; 
-		})
+		}); 
+
 		if (!appTypeTpl) throw new Error('INVALID_APP_TYPE'); 
 
 		// Find a hole in the server list 
-		var freeServer = that.list.find(function(item){
-			return item.apps.length < 2; 
-		}); 
+		var freeServer = getFirstFreeHole(that.list, 0, that.MAX_APPS_PER_SERVER); 
 
 		if (!freeServer) throw new Error('NO_AVAILABLE_SERVERS'); 
 
@@ -113,6 +113,19 @@ function AppModel( name, title ) {
 	this.title = title; 
 	this.lastUpdated = new Date(); 
 } 
+
+function getFirstFreeHole( list, minAppNum, maxAppNum ) {
+	// Get a empty server with the following conditions: 
+	// - Empty server 
+	// - 1 app server 
+	var availableSlot = null; 
+	if (minAppNum>=maxAppNum) return null; 
+	availableSlot = list.find(function(item){
+		return item.apps.length <= minAppNum; 
+	}); 
+	if (!availableSlot) return getFirstFreeHole(list, ++minAppNum, maxAppNum); 
+	return availableSlot; 
+}
 
 module.exports = {
 	servers: new Servers(), 
