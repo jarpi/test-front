@@ -1,5 +1,6 @@
 function Servers() {
 	this.list = []; 
+	this.DEFAULT_NUM_SERVERS = 4; 
 	this.MAX_SERVERS = 20; 
 	this.MAX_APPS_PER_SERVER = 2; 
 	this.APP_TYPES = [
@@ -24,6 +25,10 @@ function Servers() {
 			title: 'sp'
 		}
 	]
+
+	for (i=0;i<this.DEFAULT_NUM_SERVERS;i++) {
+		this.list.push(new ServerModel()); 
+	}
 } 
 
 Servers.prototype.AddServer = function() {

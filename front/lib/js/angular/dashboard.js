@@ -77,11 +77,13 @@ angular.module('dashboardApp', [])
 			url: 'api/server'
 		})
 		.then(function (response) {
-			console.dir(response);
+			$scope.servers = response.data; 
 		})
 		.catch(function (err){
 			console.dir(err); 
 		});
-	}
+	} 
+
+	$scope.getServersAndApps(); 
 
 }]); 
