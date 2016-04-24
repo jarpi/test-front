@@ -1,0 +1,272 @@
+html, body {
+	background: black;
+	color:white;
+}
+
+.ops_buttons .glyphicon {
+  font-size: 30px;
+}
+
+.glyphicon {
+  vertical-align: middle; 
+}
+
+.btn-circle-plus {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 0px 11px 5px 11px;
+  border-radius: 50px;
+  background-color: transparent;
+  border-color: #616161;
+}
+
+.btn-circle-plus:hover {
+  color: white;
+  background-color: transparent; 
+  border-color: white;
+}
+
+.btn-circle-plus:active {
+  background-color: transparent; 
+}
+
+.btn-circle-plus:focus {
+  background-color: transparent; 
+}
+
+.btn-circle-minus {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 0px 11px 5px 8px;
+  border-radius: 50px;
+  background-color: transparent;
+  border-color: #616161;
+}
+
+.btn-circle-minus:hover {
+  color: white;
+  background-color: transparent; 
+  border-color: white;
+}
+
+.btn-circle-minus:active {
+  background-color: transparent; 
+}
+
+.btn-circle-minus:focus {
+  background-color: transparent; 
+}
+
+.btn-circle-plus.small {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0px 0px 5px 1px;
+  border-radius: 50px;
+  background-color: transparent;
+  border-color: #616161;
+}
+
+.btn-circle-plus.small:hover {
+  color: white;
+  background-color: transparent; 
+  border-color: white;
+}
+
+.btn-circle-plus.small:active {
+  background-color: transparent; 
+}
+
+.btn-circle-plus.small:focus {
+  background-color: transparent; 
+}
+
+.btn-circle-minus.small {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0px 1px 5px 0px;
+  border-radius: 50px;
+  background-color: transparent;
+  border-color: #616161;
+}
+
+.btn-circle-minus.small:hover {
+  color: white;
+  background-color: transparent; 
+  border-color: white;
+}
+
+.btn-circle-minus.small:active {
+  background-color: transparent; 
+}
+
+.btn-circle-minus.small:focus {
+  background-color: transparent; 
+}
+
+.labels{
+  padding-top: 10px;
+  margin:0px;
+  color: #616161;
+}
+
+.lbl-add {
+  padding-left:15px;
+}
+
+.lbl-destroy {
+  padding-left:25px;
+}
+
+
+.ops_labels {
+	margin-top: 5%;
+  color: #616161;
+}
+
+.ops_wrapper {
+	margin-top: 10%;
+  margin-bottom: 100px;
+  padding:0px;
+}
+
+.functionalities {
+	text-align:center;
+  padding:0px;
+}
+
+.functionalities .btn{
+  margin-left:20px;
+}
+
+
+#ops{
+  background: #1e1e1e;
+  _border: 1px solid green;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  overflow-y: scroll; 
+  height:100%;
+}
+
+#data{
+  background: #030303;
+  _border: 1px solid red;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -99;
+} 
+
+.row #apps_wrapper {
+  padding: 0px;
+  margin-top: 10px; 
+  background-color: #141414; 
+}
+
+.row .apps {
+  line-height:60px;
+  padding:0;
+}
+
+.row #apps_wrapper .apps_func_wrapper {
+  padding-left:15px;
+  padding-right:0px;
+}
+
+.row #apps_wrapper .apps_func_wrapper div {
+  padding:0;
+}
+
+.row #apps_wrapper .apps_func_wrapper div.app_ops{
+  text-align: right;
+  padding-right:25px;
+}
+
+.row #apps_wrapper .apps_func_wrapper div.app_ops i{
+}
+
+.row #apps_wrapper #hadoop.apps {
+  border-left: 5px solid #f14ba4;
+}
+
+.row #apps_wrapper #rails.apps {
+  border-left: 5px solid #4045ee;
+}
+
+.row #apps_wrapper #chronos.apps {
+  border-left: 5px solid #2eaafd;
+}
+
+.row #apps_wrapper #storm.apps {
+  border-left: 5px solid #5be29d;
+}
+
+.row #apps_wrapper #spark.apps {
+  border-left: 5px solid #67f01c;
+}
+
+#data .row .canvas_data {
+  margin-left: 30px;
+  margin-right: 30px;
+  overflow: scroll;
+}
+
+#data .row .canvas_data .server_box {
+  background-color: #1e1e1e; 
+  height:140px;
+  width:200px;
+  max-width: 200px;
+  border-radius: 5px; 
+  padding:0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+} 
+
+.hadoop {
+  background: -webkit-linear-gradient(left top, #b648cd, #f14eb9); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #b648cd, #f14eb9); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #b648cd, #f14eb9); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #b648cd, #f14eb9); /* Standard syntax */
+  background-color: #f14ba4!important;
+}
+
+.rails {
+  background: -webkit-linear-gradient(left top, #2547f5, #5f44e4); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #2547f5, #5f44e4); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #2547f5, #5f44e4); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #2547f5, #5f44e4); /* Standard syntax */
+  background-color: #5f44e4!important;
+}
+
+.chronos {
+  background: -webkit-linear-gradient(left top, #47d1fa, #1e98fd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #47d1fa, #1e98fd); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #47d1fa, #1e98fd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #47d1fa, #1e98fd); /* Standard syntax */
+  background-color: #1e98fd!important;  
+}
+
+.storm {
+  background: -webkit-linear-gradient(left top, #5ee58b, #57deb6); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #5ee58b, #57deb6); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #5ee58b, #57deb6); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #5ee58b, #57deb6); /* Standard syntax */
+  background-color: #57deb6!important;
+}
+
+.spark {
+  background: -webkit-linear-gradient(left top, #6df20b, #64ea27); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #6df20b, #64ea27); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #6df20b, #64ea27); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #6df20b, #64ea27); /* Standard syntax */
+  background-color: #64ea27!important;
+} 
