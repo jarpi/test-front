@@ -18,7 +18,7 @@ angular.module('dashboardApp', [])
 		})
 		.then(function (response) {
 			console.dir(response);
-			$scope.servers = response.data; 
+			$scope.servers = formatData(response.data); 
 		})
 		.catch(function (err){
 			console.dir(err); 
@@ -33,7 +33,7 @@ angular.module('dashboardApp', [])
 		})
 		.then(function (response) {
 			console.dir(response);
-			$scope.servers = response.data; 
+			$scope.servers = formatData(response.data); 
 		})
 		.catch(function (err){
 			console.dir(err); 
@@ -48,7 +48,7 @@ angular.module('dashboardApp', [])
 		})
 		.then(function (response) {
 			console.dir(response);
-			$scope.servers = response.data; 
+			$scope.servers = formatData(response.data); 
 		})
 		.catch(function (err){
 			console.dir(err); 
@@ -63,7 +63,7 @@ angular.module('dashboardApp', [])
 		})
 		.then(function (response) {
 			console.dir(response);
-			$scope.servers = response.data; 
+			$scope.servers = formatData(response.data); 
 		})
 		.catch(function (err){
 			console.dir(err); 
@@ -77,12 +77,26 @@ angular.module('dashboardApp', [])
 			url: 'api/server'
 		})
 		.then(function (response) {
-			$scope.servers = response.data; 
+			$scope.servers = formatData(response.data); 
 		})
 		.catch(function (err){
 			console.dir(err); 
 		});
 	} 
+
+	function formatData(servers) {
+		return servers.map(function(server) {
+			server.apps_name = '';
+			server.apps_title = '';
+			server.apps_lastUpdated = '';
+			server.apps.forEach(function(app) {
+				server.apps_name += (server.apps_name.length>0 ? ' - ' : '') + app.name; 
+				server.apps_title += (server.apps_title.length>0 ? ' - ' : '') + app.title; 
+				server.apps_lastUpdated += (server.apps_lastUpdated.length>0 ? ' - ' : '') + app.lastUpdated; 
+			}); 
+			return server; 
+		}); 
+	}
 
 	$scope.getServersAndApps(); 
 
