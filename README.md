@@ -34,6 +34,7 @@ Build an UI like the attached in file with the following business rules
 - ### TO DO 
     There's still a lot of things to do: 
     - Refactor some classes 
+    - It should be responsive! 
     - Decouple embedded styles in html 
     - Refactor to an angular directive server boxes repeater code 
     - Refactor server-side code to enable database storage, it could be MongoDB
