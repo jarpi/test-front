@@ -3,10 +3,11 @@
 ## Problem 
 
 Build an UI like the attached in file with the following business rules 
-	- A click on add server button should add a 'grey' box representing a new ready to use machine
-	- A click on destroy server should kill a 'grey' box representing a running machine 
-	- A click on a plus sign in app should create a new app instance in the first free server or a server with one running app, if there is no available machine it shouldn't be started 
-	- A click on minus sign in app should kill the newest instance of that type 
+
+	A click on add server button should add a 'grey' box representing a new ready to use machine
+	A click on destroy server should kill a 'grey' box representing a running machine 
+	A click on a plus sign in app should create a new app instance in the first free server or a server with one running app, if there is no available machine it shouldn't be started 
+	A click on minus sign in app should kill the newest instance of that type 
 
 ## Proposed solution 
 
